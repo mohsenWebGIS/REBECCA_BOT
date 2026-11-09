@@ -1,0 +1,28 @@
+version: "3.9"
+
+services:
+  user-bot:
+    build: .
+    command: python -m user_bot.main
+    env_file: .env
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+    restart: unless-stopped
+    # no ports — polling only
+
+  manager-bot:
+    build: .
+    command: python -m manager_bot.main
+    env_file: .env
+    volumes:
+      - ./data:/app/data          # SAME volume as user-bot
+      - ./logs:/app/logs
+    restart: unless-stopped
+    # no ports — polling only
+
+  # optional: uncomment only if you switch to webhooks later
+  # nginx:
+  #   image: nginx:alpine
+  #   ports: ["443:443"]
+  #   volumes: [./nginx:/etc/nginx/conf.d, ./certs:/etc/letsencrypt]

@@ -1,0 +1,58 @@
+[
+  {
+    "name": "ping",
+    "method": "GET",
+    "path": "/api/system",
+    "status": 200,
+    "ok": true,
+    "detail": null
+  },
+  {
+    "name": "list_users",
+    "method": "GET",
+    "path": "/api/users",
+    "status": 200,
+    "ok": true,
+    "detail": null
+  },
+  {
+    "name": "create_user",
+    "method": "POST",
+    "path": "/api/user",
+    "status": 201,
+    "ok": true,
+    "detail": null
+  },
+  {
+    "name": "get_user",
+    "method": "GET",
+    "path": "/api/user/probe_1794032492",
+    "status": 200,
+    "ok": true,
+    "detail": null
+  },
+  {
+    "name": "get_user_usage",
+    "method": "GET",
+    "path": "/api/user/probe_1794032492/usage",
+    "status": 200,
+    "ok": true,
+    "detail": null
+  },
+  {
+    "name": "update_user",
+    "method": "PUT",
+    "path": "/api/user/probe_1794032492",
+    "status": 200,
+    "ok": true,
+    "detail": null
+  },
+  {
+    "name": "delete_user",
+    "method": "DELETE",
+    "path": "/api/user/probe_1794032492",
+    "status": 200,
+    "ok": true,
+    "detail": null
+  }
+]
